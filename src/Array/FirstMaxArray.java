@@ -1,12 +1,11 @@
 package Array;
 
 public class FirstMaxArray {
-	
-	public static void main(String args[])
-	{
-		int arr[] = {10,0,50,100,-20,3};
+
+	public static void main(String args[]) {
+		int arr[] = { 10, 0, 50, 100, -20, 3 };
 		int max = arr[0];
-		
+
 		for(int i=0;i<arr.length;i++)
 		{
 			if(arr[i]>max)
@@ -14,8 +13,7 @@ public class FirstMaxArray {
 				max=arr[i];
 			}
 		}
-		
-		System.out.print(max);
+		System.out.println(max);
 	}
 
 }

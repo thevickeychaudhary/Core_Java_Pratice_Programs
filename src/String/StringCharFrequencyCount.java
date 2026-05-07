@@ -4,22 +4,20 @@ public class StringCharFrequencyCount {
 
 	public static void main(String args[]) {
 
-		String str = "aaabbccaabbb";
+		String s = "programming";
 
-		StringBuilder sb = new StringBuilder();
+		int[] arr = new int[256];
 
-		int count = 1;
-
-		for (int i = 0; i < str.length(); i++) {
-			if (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
-				count++;
-			} else {
-				sb.append(str.charAt(i)).append(count);
-				count=1;
+		for (int i = 0; i < s.length(); i++) {
+			arr[s.charAt(i)]++; // put in array ascii value form
+		}
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]!=0) // if frequency is zero then do not enter in 
+			{
+				System.out.print((char)i+""+arr[i]+" ");
 			}
 		}
-		System.out.print(sb);
 
 	}
-
 }
